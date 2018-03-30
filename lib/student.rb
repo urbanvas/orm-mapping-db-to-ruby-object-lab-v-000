@@ -93,6 +93,7 @@ class Student
           # binding.pry
     first_student = DB[:conn].execute(sql)
     object = self.new_from_db(first_student)
+    binding.pry
     object.id
   end
 
