@@ -93,4 +93,10 @@ class Student
     a = DB[:conn].execute(sql)[0]
     a[0]
   end
+
+  def self.all_students_in_grade_X(x)
+    sql = <<-SQL
+          SELECT COUNT(grade) FROM students WHERE grade = (?)
+          SQL
+    DB[:conn].execute(sql, x)
 end
