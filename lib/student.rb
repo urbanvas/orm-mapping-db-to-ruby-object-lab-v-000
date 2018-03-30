@@ -92,6 +92,5 @@ class Student
           SQL
     a = DB[:conn].execute(sql)[0]
     a[0]
-    binding.pry
   end
 end
