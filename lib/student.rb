@@ -83,13 +83,8 @@ class Student
     sql = <<-SQL
           SELECT * FROM students WHERE grade = 10 LIMIT (?)
           SQL
-        # binding.pry
-        DB[:conn].execute(sql, x)
+    DB[:conn].execute(sql, x)
   end
-
-  # sql = "SELECT * FROM students WHERE grade = 10 LIMIT (2)"
-
-
 
   def self.first_student_in_grade_10
     sql = <<-SQL
