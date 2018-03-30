@@ -87,7 +87,7 @@ class Student
     binding.pry
   end
 
-  sql = "SELECT * FROM students WHERE grade = 10 LIMIT (2)"
+  # sql = "SELECT * FROM students WHERE grade = 10 LIMIT (2)"
 
 
 
