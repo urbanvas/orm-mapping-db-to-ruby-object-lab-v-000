@@ -90,7 +90,7 @@ class Student
     sql = <<-SQL
           SELECT COUNT(grade) FROM students WHERE grade = 10 LIMIT 1
           SQL
-    a = DB[:conn].execute(sql).flatten
+    a = DB[:conn].execute(sql)[0]
     binding.pry
   end
 end
