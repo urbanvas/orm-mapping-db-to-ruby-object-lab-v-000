@@ -83,9 +83,8 @@ class Student
     sql = <<-SQL
           SELECT * FROM students WHERE grade = 10 LIMIT (2)
           SQL
-        binding.pry
-    a = DB[:conn].execute(sql, x)
-
+        # binding.pry
+        DB[:conn].execute(sql, x)
   end
 
   # sql = "SELECT * FROM students WHERE grade = 10 LIMIT (2)"
