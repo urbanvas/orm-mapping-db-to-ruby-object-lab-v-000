@@ -83,7 +83,8 @@ class Student
     sql = <<-SQL
           SELECT COUNT(grade) FROM students WHERE grade = 10 LIMIT (?)
           SQL
-    DB[:conn].execute(sql, x)
+    a = DB[:conn].execute(sql, x)
+    binding.pry
   end
 
   def self.first_student_in_grade_10
