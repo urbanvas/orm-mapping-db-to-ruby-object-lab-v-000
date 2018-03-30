@@ -91,7 +91,8 @@ class Student
           SELECT * FROM students WHERE grade = 10 LIMIT 1
           SQL
           binding.pry
-    DB[:conn].execute(sql)
+    first_student = DB[:conn].execute(sql)
+    self.new_from_db(first_student)
   end
 
   def self.all_students_in_grade_X(x)
