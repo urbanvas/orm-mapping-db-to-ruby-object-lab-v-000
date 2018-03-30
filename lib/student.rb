@@ -93,8 +93,8 @@ class Student
           # binding.pry
     first_student = DB[:conn].execute(sql).flatten
     object = self.new_from_db(first_student)
-    binding.pry
-    object.id
+    # binding.pry
+    # object.id
   end
 
   def self.all_students_in_grade_X(x)
