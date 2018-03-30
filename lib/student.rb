@@ -99,4 +99,5 @@ class Student
           SELECT COUNT(grade) FROM students WHERE grade = (?)
           SQL
     DB[:conn].execute(sql, x)
+  end
 end
