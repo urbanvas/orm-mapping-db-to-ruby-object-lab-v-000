@@ -90,7 +90,7 @@ class Student
     sql = <<-SQL
           SELECT * FROM students WHERE grade = 10 LIMIT 1
           SQL
-          binding.pry
+          # binding.pry
     first_student = DB[:conn].execute(sql)
     self.new_from_db(first_student)
   end
