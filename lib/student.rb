@@ -91,7 +91,7 @@ class Student
           SELECT * FROM students WHERE grade = 10 LIMIT 1
           SQL
           # binding.pry
-    first_student = DB[:conn].execute(sql)
+    first_student = DB[:conn].execute(sql).flatten
     object = self.new_from_db(first_student)
     binding.pry
     object.id
